@@ -1,0 +1,52 @@
+body, html {
+    height: 100%;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-right {
+    float: right!important;
+}
+.navbar-nav.navbar-right:last-child {
+    margin-right: -15px !important;
+}
+.navbar-collapse.collapse {
+    display: block!important;
+}
+.message-list {
+    overflow: scroll;
+    margin: 0;
+    padding: 0 15px;
+}
+.message-section {
+    height: 100%;
+}
+.message-composer {
+    width: 100%;
+}
+
+/*
+* Helper Classes
+*/
+.layout-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.layout-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex {
+    flex: 1;
+}
+.center-content {
+    align-items: center;
+    justify-content: center;
+}
+.margin-top {
+    margin-top: 25px;
+}
+.full-width {
+    width: 100%;
+}
