@@ -44,7 +44,7 @@ var MessageSection = React.createClass({
     )
   },
 
-  componentDidUpdate() {
+  componentDidUpdate: function() {
     this._scrollToBottom();
   },
 
