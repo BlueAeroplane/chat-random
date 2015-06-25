@@ -14,12 +14,17 @@ var MessageComposer = React.createClass({
     };
   },
 
+  componentDidMount() {
+    React.findDOMNode(this.refs.textInput).focus();
+  },
+
   render: function() {
     return (
-      <div>
+      <div className="message-composer">
         <input
-          className="message-composer form-control"
+          className="form-control"
           name="message"
+          ref="textInput"
           value={this.state.text}
           onChange={this._onChange}
           onKeyDown={this._onKeyDown}

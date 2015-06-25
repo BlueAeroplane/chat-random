@@ -13,15 +13,17 @@ var Login = React.createClass({
     return (
       <div className="login-form">
         <div className="form-group">
-          <label for="username">Username</label>
-          <input
-            className="form-control"
-            name="username"
-            id="username"
-            value={this.state.username}
-            onChange={this._onChange}
-            onKeyDown={this._onKeyDown}
-            />
+          <label>
+            Username
+            <input
+              className="form-control"
+              name="username"
+              id="username"
+              value={this.state.username}
+              onChange={this._onChange}
+              onKeyDown={this._onKeyDown}
+              />
+          </label>
         </div>
         <button onClick={this._onClick} className="btn btn-primary">Continue</button>
       </div>

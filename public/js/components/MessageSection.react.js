@@ -2,6 +2,7 @@ var MessageListItem = require('./MessageListItem.react');
 var MessageComposer = require('./MessageComposer.react');
 var MessageStore = require('../stores/MessageStore');
 var StatusStore = require('../stores/StatusStore');
+var crypto = require('crypto');
 var React = require('react');
 
 function getStateFromStores() {
@@ -10,9 +11,12 @@ function getStateFromStores() {
   };
 }
 
-function getMessageListItem(message) {
+function getMessageListItem(message, i) {
   return (
-    <MessageListItem message={message} />
+    <MessageListItem
+      key={i}
+      message={message}
+    />
   );
 }
 
@@ -32,8 +36,9 @@ var MessageSection = React.createClass({
   },
 
   render: function() {
-    var messageListItems = this.state.messages.map(getMessageListItem);
-    var waiting = this.state.waiting;
+    var messageListItems = this.state.messages.map(function(message, i) {
+      return getMessageListItem(message, i);
+    });
     return (
       <div className="message-section full-width layout-flex-column">
         <div className="message-list flex" ref="messageList">
